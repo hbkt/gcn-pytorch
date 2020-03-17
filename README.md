@@ -18,9 +18,9 @@ if __name__=='__main__':
     # load a data according to input
     data = load_data('cora')
 
-    # create GCN and optimizer(Adam)
-    model, optimizer = create_gcn_model(data)
+    # create GCN model
+    model = create_gcn_model(data)
 
     # run the model niter times
-    run(data, model, optimizer, niter=10)
+    run(data, model, lr=0.01, weight_decay=5e-4, niter=10)
 ```
