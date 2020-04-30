@@ -10,7 +10,7 @@ $ python main.py
 
 ## Explanation of main.py
 ```python
-from gcn import create_gcn_model
+from gcn import GCN
 from train import run
 from data import load_data
 
@@ -19,7 +19,7 @@ if __name__=='__main__':
     data = load_data('cora')
 
     # create GCN model
-    model = create_gcn_model(data)
+    model = GCN(data)
 
     # run the model niter times
     run(data, model, lr=0.01, weight_decay=5e-4, niter=10)
